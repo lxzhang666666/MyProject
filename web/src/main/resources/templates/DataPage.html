@@ -6,19 +6,19 @@
 </head>
 <body>
 <table id="dp" class="easyui-datagrid" title="数据平台"
-       data-options="singleSelect:true ,method:'get',toolbar:'#tb'" style="width: 100%">
+       data-options="singleSelect:true ,method:'get',toolbar:'#tb-data'" style="width: 100%">
 </table>
-<table id="table-ff" border="5px" cellspacing="5px" bordercolor="blue" width="200px" height="50px" align="center">
-       <!--style="background: 100%;background-image: url('../../img/logo.png')"-->
-    <tr bgcolor="#f0ffff" width="10px" height="30px" align="center" nowrap="nowrap">
-        <th>id</th>
-        <th>name</th>
-        <th>操作</th>
-    </tr>
-</table>
-<div class="easyui-datagrid" id="table-data" >
-
+<div id="tb-data" style="padding:5px;height:auto;width: 100%">
+    <table id="table-ff" border="5px" cellspacing="5px" bordercolor="blue" width="200px" height="50px" align="center">
+        <!--style="background: 100%;background-image: url('../../img/logo.png')"-->
+        <tr bgcolor="#f0ffff" width="10px" height="30px" align="center" nowrap="nowrap">
+            <th>id</th>
+            <th>name</th>
+            <th>操作</th>
+        </tr>
+    </table>
 </div>
+
 
 </body>
 <script type="text/javascript">
@@ -56,6 +56,7 @@
         });
 
     });
+
 </script>
 
 

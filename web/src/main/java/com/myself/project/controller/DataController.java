@@ -24,6 +24,8 @@ public class DataController {
     @Autowired
     private MyBiz myBiz;
 
+    private static final String DATA_STR = "data";
+
     @RequestMapping("/DataPage")
     public String getDataPage() {
         logger.info("访问数据页");
@@ -33,7 +35,7 @@ public class DataController {
     @RequestMapping("/getData.json")
     @ResponseBody
     public String getData(){
-        List<Project> data = myBiz.getData();
+        List<Project> data = myBiz.getData(DATA_STR);
         logger.info("数据{}", JSON.toJSONString(data));
         return  JSON.toJSONString(data);
     }

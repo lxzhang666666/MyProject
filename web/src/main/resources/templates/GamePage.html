@@ -6,15 +6,25 @@
 </head>
 <body>
 <table id="gm" class="easyui-datagrid" title="游戏"
-       data-options="singleSelect:true ,method:'get',toolbar:'#tb'" style="width: 100%">
+       data-options="singleSelect:true ,method:'get',toolbar:'#gg-tb'" style="width: 100%">
 </table>
-<a href="start">开始游戏</a>
-<div class="easyui-datagrid" id="table-data" >
-
+<div id="gg-tb" style="padding:5px;height:auto;width: 100%">
+    <a id="btn-gg" class="easyui-linkbutton" style="atsc-nav-right: 100px" data-options="iconCls:'icon-ok'"
+       onclick="Start()">开始游戏</a>
 </div>
+
 
 </body>
 <script type="text/javascript">
+    function Start() {
+        $.post("/start",  function (data) {
+            console.log(data);
+            window.open(data);
+        });
+    }
+
+
+
 
 </script>
 

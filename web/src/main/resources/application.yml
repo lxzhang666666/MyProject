@@ -1,0 +1,67 @@
+logging:
+  config: classpath:logback.xml
+mapper:
+  use-simple-type: false
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapperLocations: classpath*:mappers/*Mapper.xml
+  type-aliases-package: com.myself.**.entity
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initial-size: 20
+    max-active: 20
+    max-wait: 60000
+    min-evictable-idle-time-millis: 300000
+    min-idle: 20
+    password: 123456
+    poolPreparedStatements: true
+    test-on-borrow: false
+    test-on-return: false
+    test-while-idle: true
+    time-between-eviction-runs-millis: 60000
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://101.201.67.14:3306/myproject?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=CTT&zeroDateTimeBehavior=convertToNull
+    username: root
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+  redis:
+    database: 0
+    host: 101.201.67.14
+    password: 123456
+    poolMaxIdle: 20
+    poolMaxTotal: 100
+    poolMaxWait: -1
+    port: 6379
+    timeout: 300
+  thymeleaf:
+    cache: 'false'
+    mode: LEGACYHTML5
+    prefix: classpath:/templates/
+
+
+  kafka:
+    bootstrap-servers: 101.201.67.14:19092
+
+    producer:
+      retries: 0
+      batch-size: 16384
+      buffer-memory: 33554432
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      properties:
+        linger.ms: 1
+
+    consumer:
+      group-id: test-consumer-group
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      auto-commit-interval: 100
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        session.timeout.ms: 15000

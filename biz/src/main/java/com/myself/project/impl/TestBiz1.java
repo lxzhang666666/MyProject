@@ -22,5 +22,5 @@ public class TestBiz1 extends AbstractBiz {
     @Override
     public void doAction(String str){
         System.out.println("str = " + str);
-    };
+    }
 }
