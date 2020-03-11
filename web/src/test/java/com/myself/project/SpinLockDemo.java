@@ -35,6 +35,7 @@ public class SpinLockDemo {
                 e.printStackTrace();
             }
             lockDemo.myUnLock();
+
         },"AAA").start();
 
         try {
