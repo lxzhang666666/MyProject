@@ -85,7 +85,8 @@ class MyRes{
                 System.out.println(Thread.currentThread().getName() + " 消费队列 超时 退出");
                 return;
             }
-            System.out.println(Thread.currentThread().getName() + " 消费队列 " + value+ " 成功");
+            System.out.println(Thread.currentThread().getName() +
+                    " 消费队列 " + value+ " 成功");
 
         }
 
