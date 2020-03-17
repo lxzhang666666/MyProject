@@ -21,7 +21,7 @@ public class GCRootDemo {
         //虚拟机栈（栈帧中的局部变量区，也叫局部变量表）中的引用对象
         GCRootDemo gcRootDemo = new GCRootDemo();
         System.gc();
-        System.out.println(" 第一次 GC 完成 " );
+        System.out.println(" 第一次 GC 完成  " );
 
 
     }
