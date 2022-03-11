@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
+@RequestMapping("/we")
 public class DataController {
 
     protected static Logger logger = LoggerFactory.getLogger(DataController.class);

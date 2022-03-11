@@ -14,12 +14,6 @@ public class GameController {
     protected static Logger logger = LoggerFactory.getLogger(GameController.class);
 
 
-    @RequestMapping("/GamePage")
-    public String getGamePage() {
-        logger.info("访问游戏");
-        return "GamePage";
-    }
-
     @RequestMapping("/start")
     @ResponseBody
     public String getStart() {
